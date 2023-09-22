@@ -25,12 +25,6 @@ func IsDivisibleBy7(num int) bool {
 	return num%7 == 0
 }
 
-func princeadd(no1, no2 int) int 
-{
-	return no1 + no2
-}
-
-
 func main() {
 	
 	num1 := 10
@@ -60,8 +54,5 @@ func main() {
 		{
 			fmt.Printf("%d is not divisible by 7\n", number)
 		}
-///////////////////////////////////////////////////////////////////
-	result := princeadd(5, 3)
-		fmt.Printf("The sum is: %d\n", result)
-		
+
 }
