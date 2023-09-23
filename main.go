@@ -29,6 +29,27 @@ func princeadd(no1, no2 int) int {
 	return no1 + no2
 }
 
+func getDayOfWeek(dayNumber int) string {
+	switch dayNumber {
+	case 1:
+	return "Sunday"
+	case 2:
+	return "Monday"
+	case 3:
+	return "Tuesday"
+	case 4:
+	return "Wednesday"
+	case 5:
+	return "Thursday"
+	case 6:
+	return "Friday"
+	case 7:
+	return "Saturday"
+	default:
+	return "Invalid day number"
+}
+}
+
 func main() {
 	
 	num1 := 10
@@ -62,5 +83,17 @@ func main() {
 
 		result := princeadd(5, 3)	
 		fmt.Printf("The sum is: %d\n", result)
+
+//////////////////////////////////////////////////////////////////
+
+		var dayNumber int
+			fmt.Print("Enter a day number (1-7): ")
+				_, err := fmt.Scan(&dayNumber)
+					if err != nil || dayNumber < 1 || dayNumber > 7 {
+			fmt.Println("Invalid input. Please enter a number between 1 and 7.")
+		return
+		}
+		dayOfWeek := getDayOfWeek(dayNumber)
+		fmt.Printf("The day of the week is %s.\n", dayOfWeek)
 
 }
